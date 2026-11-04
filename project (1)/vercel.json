@@ -1,0 +1,16 @@
+{
+  "builds": [
+    {
+      "src": "api/index.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "installCommand": "echo 'Skipping npm install'",
+  "buildCommand": "echo 'Skipping build'",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.mjs"
+    }
+  ]
+}
